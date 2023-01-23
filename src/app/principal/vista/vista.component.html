@@ -1,0 +1,19 @@
+<h2>lista de usuarios</h2>
+<section class="container-sm">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>userid</th>
+                <th>id</th>
+                <th>titulo</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let item of listado">
+                <td>{{item.name}}</td>
+                <td>{{item.id}} </td>
+                <td>{{item.username}}</td>
+            </tr>
+        </tbody>
+    </table>
+</section>

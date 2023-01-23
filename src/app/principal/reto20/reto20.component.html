@@ -1,0 +1,13 @@
+<h1>Reto 20 Mostrar usuarios</h1>
+<h2>Usuarios</h2>
+<button name="MostarUsuarios" (click)="mostrarusuarios()">Mostrar Usuarios</button>
+<ul class="Usuarios">
+    <section *ngIf="resultado">
+        <li *ngFor="let usuario of listado">
+            <span clase="badge">{{usuario.id}}</span>{{usuario.name}}
+        </li>
+    </section>
+   <section *ngIf="!resultado">
+        presiona el boton
+   </section>
+</ul>

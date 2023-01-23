@@ -1,0 +1,50 @@
+/* article{
+    width: 336px;
+    padding: 12px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+section{
+    display: flex;
+    flex-wrap: wrap;
+}
+h2{
+    text-align: center;
+    background-color: pink;
+}
+.contenido{
+    padding: 12px;
+    border: 3px solid blanchedalmond;
+    box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.75);
+    border-radius: 12px;
+} */
+section{
+    display: flex;
+    flex-wrap: wrap;
+}
+.card-title {
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+.card:nth-child(even){
+    background: linear-gradient(90deg, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);    
+}
+.card:nth-child(odd){
+    background: linear-gradient(90deg, rgba(252,70,107,1) 0%, rgba(63,94,251,1) 100%);
+}
+.card-paragraph {
+    background-color: white;
+    color: black;
+    padding: 10px;
+    font-size: 18px;
+    height: 100%;
+}
+.card {
+    box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.75);
+    width: 310px;
+    margin: 12px;
+}

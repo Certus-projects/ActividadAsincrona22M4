@@ -1,0 +1,67 @@
+<section class="col-3 container mt-1">
+  <section class="alert alert-success">
+    <p>Username test</p>
+    <p>Password test</p>
+  </section>
+  <h3 class="text-center">Auth login</h3>
+  <section *ngIf="contrasenaincorrecta" class="incorrecto">
+    <h4>tu contraseña o tu usuario son incorrectos</h4>
+  </section>
+
+  <form [formGroup]="registroform">
+    <section class="form-group">
+      <label for="username" class="mt-1 h3">Username:</label>
+      <input
+        formControlName="usuario"
+        type="text"
+        class="form-control my-1"
+        id="username"
+      />
+      <section>
+        <section
+          *ngIf="usuario?.errors?.['required']"
+          class="alert alert-success"
+        >
+          el usuario es obligatorio
+        </section>
+        <section *ngIf="usuario?.errors?.['email']" class="alert alert-success">
+          debe ser un email valido
+        </section>
+      </section>
+    </section>
+    <section class="form-group">
+      <label for="password" class="mt-1 h3">Password:</label>
+      <input
+        formControlName="password"
+        minlength="6"
+        type="password"
+        class="form-control my-1"
+        id="password"
+      />
+      <section
+        *ngIf="password?.invalid && (password?.dirty || password?.touched)"
+      >
+        <section
+          *ngIf="password?.errors?.['required']"
+          class="alert alert-success"
+        >
+          la contraseña es obligatoria
+        </section>
+        <section
+          *ngIf="password?.errors?.['minlength']"
+          class="alert alert-success"
+        >
+          minlength
+        </section>
+      </section>
+    </section>
+    <div class="botoncentrado p-4">
+      <input
+        class="btn btn-primary"
+        [disabled]="registroform.invalid"
+        (click)="login()"
+        value="iniciar sesion"
+      />
+    </div>
+  </form>
+</section>

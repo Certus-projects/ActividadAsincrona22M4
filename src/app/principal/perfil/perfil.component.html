@@ -1,0 +1,45 @@
+<section class="container mt-4" *ngIf="userData">
+  <form class="form-group">
+    <section class="form-group">
+      <label for="firstname">First Name</label>
+      <input
+        type="text"
+        class="form-control"
+        id="firstname"
+        name="name"
+        [(ngModel)]="userData.nombre"
+        disabled="true"
+      />
+    </section>
+    <section class="form-group">
+      <label for="lastname">Last Name</label>
+      <input
+        type="text"
+        class="form-control"
+        id="lastname"
+        name="ape"
+        [(ngModel)]="userData.apellido"
+        disabled="true"
+      />
+    </section>
+    <section class="form-group">
+      <label for="username">Email</label>
+      <input
+        type="text"
+        class="form-control"
+        id="username"
+        name="user"
+        [(ngModel)]="userData.email"
+        disabled="true"
+      />
+    </section>
+    <section class="form-group"></section>
+    <section class="form-group"></section>
+  </form>
+</section>
+
+<section class="container mt-4" *ngIf="!userData">
+  <p class="text-center text-danger">
+    Debes registrate para visualizar tus datos
+  </p>
+</section>

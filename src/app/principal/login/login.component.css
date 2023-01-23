@@ -1,0 +1,18 @@
+.botoncentrado{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.incorrecto {
+    background-color: #ad1b1b;
+    color: #fff;
+    border: 2px solid #fff;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    border: 3px solid #c92626;
+}
+.incorrecto h4 {
+    margin: 0;
+    padding: 0;
+}

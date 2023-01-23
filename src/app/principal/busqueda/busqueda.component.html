@@ -1,0 +1,16 @@
+<h2>Busqueda de usuarios</h2>
+<section class="container-sm">
+    <section class="form-group">
+        <label for="id">Ingrese ID: </label>
+        <input type="text" #txtIdUser>
+        <input type="button" value="Buscar" (click)="getUserId(txtIdUser.value)">
+    </section>
+    <section class="datos" *ngIf="resultado">
+        <p>id: {{user.id}}</p>
+        <p>id: {{user.name}}</p>
+        <p>id: {{user.username}}</p>
+    </section>
+    <section class="nohaydatos" *ngIf="!resultado">
+        no hay datos
+    </section>
+</section>
